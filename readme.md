@@ -15,7 +15,7 @@ Menggunakan library:
 Optional
 - [`Air`](https://github.com/air-verse/air) — untuk hot reload
 
-# Installation
+# Installation Guide
 - Inisialisasi module (jika belum)
 go mod init go-crud
 
