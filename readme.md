@@ -1,35 +1,42 @@
-# Go CRUD Layered Architecture
+# 📦 Go CRUD Layered Architecture
 
-Project ini adalah implementasi sederhana CRUD API menggunakan **Golang** dengan pendekatan arsitektur layered:
+Project ini adalah implementasi sederhana **CRUD API** menggunakan **Golang** dengan pendekatan arsitektur **layered**:
 
-- `controller`
-- `service`
-- `repository`
-- `model`
+### ✅ Arsitektur Folder
+- `controller` – menangani HTTP request/response
+- `service` – berisi logic / business process
+- `repository` – mengakses dan mengelola data (ORM)
+- `model` – struktur data dan relasi GORM
 
-Menggunakan library:
-- [`Gin`](https://github.com/gin-gonic/gin) — HTTP web framework
-- [`GORM`](https://gorm.io/) — ORM untuk Golang
-- [`godotenv`](https://github.com/joho/godotenv) — untuk mengelola environment variables
+---
 
-Optional
-- [`Air`](https://github.com/air-verse/air) — untuk hot reload
+## 🔧 Tech Stack
 
-# Installation Guide
-- Inisialisasi module (jika belum)
-go mod init go-crud
+| Library | Deskripsi |
+|--------|-----------|
+| [Gin](https://github.com/gin-gonic/gin) | HTTP Web Framework |
+| [GORM](https://gorm.io/) | ORM (Object Relational Mapping) |
+| [godotenv](https://github.com/joho/godotenv) | Mengelola konfigurasi via `.env` |
+| [Air](https://github.com/air-verse/air) _(optional)_ | Hot reload saat development |
 
-- Install Gin (Web Framework)
+---
+
+## 🚀 Installation Guide
+
+### 1. Inisialisasi Module
+```bash
+go mod init {your_project_name}
+
+# Gin - Web framework
 go get github.com/gin-gonic/gin
 
-- Install GORM (ORM Golang)
+# GORM - ORM
 go get gorm.io/gorm
 go get gorm.io/driver/mysql
 
-- Install godotenv (untuk membaca file .env)
+# godotenv - untuk membaca file .env
 go get github.com/joho/godotenv
 
-Optional
-- install Air untuk hot reload
+# Install Air (Optional - untuk hot reload saat development)
 go install github.com/air-verse/air@latest
 
